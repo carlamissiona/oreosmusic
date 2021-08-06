@@ -1,0 +1,268 @@
+{{set . "title" "PigPens"}}
+{{template "header.html" .}}
+
+
+<body id="top">
+
+	<!-- header
+   ================================================== -->
+   <header>
+
+   	<div class="row">
+   		<div class="logo">
+	         <a href="index.html">PigPens</a>
+	      </div>
+
+			<div class="social-links">
+			   <ul>
+					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+				   <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+				   <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+				   <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+				</ul>
+			</div>
+   	</div>
+
+   </header> <!-- /header -->
+
+   <!-- home
+   ================================================== -->
+   <section id="home" class="home-slides">
+
+   	<div class="shadow-overlay"></div>
+
+   	<div class="content-wrap-table">
+
+		   <div class="main-content-tablecell">
+
+		   	<div class="row">
+		   		<div class="col-twelve">
+
+		   			<div>
+    		   				<div class="half">
+                      {{if .errors}}
+                      <div class="error">
+                      	<h2>Oops, please correct these errors</h2>
+                      	<ul>
+                      		{{range .errors}}
+                      			<li>{{.}}</li>
+                      		{{end}}
+                      	</ul>
+                      </div>
+                      {{end}}
+		   				</div>
+
+		   			</div>
+
+			  			<div class="bottom-text">
+			  				<h1>Our site is launching soon.</h1>
+				  			<p>
+							Music.Beats.Pop. Oreos is a free playlist site. Comming soon.
+				  			</p>
+			  			</div>
+
+			   	</div> <!-- /twelve -->
+
+			   	<div class="scroll-icon">
+
+					   <p class="scroll-text">Scroll For More Info</p>
+					   <a href="#info" class="smoothscroll">
+					   	<div class="mouse"></div>
+					   </a>
+				   	<div class="end-top"></div>
+
+					</div> <!-- /scroll-icon -->
+		   	</div> <!-- /row -->
+
+		   </div> <!-- /main-content -->
+
+		</div> <!-- /content-wrap -->
+
+   </section> <!-- /home -->
+
+
+   <!-- info
+   ================================================== -->
+   <section id="info">
+
+   	<div class="info-overlay"></div>
+
+   	<div class="row">
+   		<div class="col-twelve tabs-wrap">
+
+   			<ul class="tabs">
+   				<li class="active" data-id="tab-about"><i class="icon-user"></i><span>About</span></li>
+   				<li data-id="tab-contact"><i class="icon-mail"></i><span>Get A Preview</span></li>
+					<li data-id="tab-subscribe"><i class="icon-newspaper"></i><span>Subscribe</span></li>
+				</ul> <!-- /tabs -->
+
+				<div class="tab-container">
+
+					<!-- tab content - about
+   				================================================== -->
+					<div id="tab-signup" class="tab-content">
+
+					   <div class="tab-entry">
+
+					   	<div class="row tab-entry-intro">
+					   		<div class="col-twelve with-bottom-line">
+
+					   			<h1>Sign Up</h1>
+                    <form method="POST" action="/submitsignup">
+                      <label for="fname">First name:</label><br>
+                      <input type="text" id="fname" name="fname" value="John"><br>
+                      <label for="lname">Last name:</label><br>
+                      <input type="text" id="lname" name="lname" value="Doe"><br><br>
+
+                      <label for="address">Country:</label><br>
+                      <input type="text" id="country" name="country" value="Doe"><br><br>
+
+                      <label for="address">Email:</label><br>
+                      <input type="text" id="email" name="email" type="email" value="Doe"><br><br>
+
+                      <label for="address">Password:</label><br>
+                      <input type="text" id="password" name="password" type="password" value="Doe"><br><br>
+                      <input type="submit" value="Submit">
+                    </form>
+					   		</div>
+					   	</div> <!-- /tab-content-intro -->
+
+					   	<div class="row about-content tab-entry-content">
+
+					   		<div class="about-list block-1-3 block-s-1-2 block-tab-full">
+
+
+
+								   <div class="bgrid item">
+
+								   	<span class="icon"><i class="icon-pencil-ruler"></i></span>
+
+						            <div class="item-content">
+						            	<h3 class="h05">Stylish Design</h3>
+
+							            <p>
+                              {{if .errors}}
+                                <div class="error">
+                                  <ul>
+                                  {{range .errors}}
+                                      <li> {{.Message}}</li>
+                                  {{end}}
+                                  </ul>
+                                </div>
+                                {{end}}
+
+                          </p>
+
+
+						            </div>
+
+								   </div> <!-- /bgrid -->
+
+									<div class="bgrid item">
+
+										<span class="icon"><i class="icon-objects"></i></span>
+
+						            <div class="item-content">
+						            	<h3 class="h05">Clean Code</h3>
+
+							            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						         		</p>
+
+
+						            </div>
+
+									</div> <!-- /bgrid -->
+
+
+
+								   <div class="bgrid item">
+
+								   	<span class="icon"><i class="icon-gift"></i></span>
+
+						            <div class="item-content">
+						            	 <h3 class="h05">Free of Charge</h3>
+
+							            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+						        			</p>
+
+						            </div>
+
+								   </div> <!-- /bgrid -->
+
+						      </div> <!-- /about-list -->
+
+					     	</div> <!-- /row about-content -->
+
+					   </div> <!-- /tab-entry -->
+
+					</div> <!-- /tab-about -->
+
+
+				</div> <!-- /tab-container -->
+
+   		</div> <!-- twelve -->
+   	</div> <!-- row -->
+
+   </section> <!-- /info -->
+
+
+   <!-- CTA Section
+   ================================================== -->
+	<section id="cta">
+
+   	<div class="row cta-wrap">
+
+   		<div class="col-twelve cta-content">
+
+	     		<h2 class="h01"><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Website Deisgned By Styleshout </a></h2>
+
+		      <p class="lead">
+		      Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span> Support This Theme</span></a>.
+				Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>.
+				<!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
+				</p>
+
+				<div class="action">
+			      <a class="button large" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign Up Now</a>
+		      </div>
+
+   		</div>
+
+   	</div> <!-- /cta-content -->
+
+   </section> <!-- /cta -->
+
+
+   <!-- footer
+   ================================================== -->
+   <footer>
+
+   	<div class="social-wrap">
+   		<div class="row">
+
+	         <ul class="footer-social-list">
+	            <li><a href="#">
+	             	<i class="fa fa-facebook"></i><span>Facebook</span>
+	            </a></li>
+	            <li><a href="#">
+	              	<i class="fa fa-twitter"></i><span>Twitter</span>
+	            </a></li>
+	            <li><a href="#">
+	              	<i class="fa fa-pinterest"></i><span>Pinterest</span>
+	            </a></li>
+	            <li><a href="#">
+	              	<i class="fa fa-instagram"></i><span>Instagram</span>
+	            </a></li>
+	            <li><a href="#">
+	              	<i class="fa fa-dribbble"></i><span>Dribbble</span>
+	            </a></li>
+	         </ul>
+
+			</div> <!-- /row -->
+   	</div> <!-- /social-wrap -->
+
+
+
+
+{{template "footer.html" .}}
